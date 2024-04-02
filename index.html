@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <title>Login Page</title>
 </head>
 
@@ -17,7 +18,7 @@
                 <h1>Creat Account</h1>
                 <input type="text" placeholder="Name" required autocomplete="off">
                 <input type="email" placeholder="Email" required autocomplete="off">
-                <input type="password" placeholder="Password" required autocomplete="off">
+                <input type="password" placeholder="Password" required autocomplete="off" minlength="6">
                 <span>or Sign in with</span>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -32,7 +33,7 @@
             <form>
                 <h1>Sign In</h1>
                 <input type="email" placeholder="Email" required autocomplete="off">
-                <input type="password" placeholder="Password" required autocomplete="off">
+                <input type="password" placeholder="Password" required autocomplete="off" minlength="6">
                 <a href="#">Forget Your Password?</a>
                 <span>or Sign in with</span>
                 <div class="social-icons">
@@ -46,14 +47,14 @@
         </div>
         <div class="toggle-container">
             <div class="toggle">
-                <div class="toggle-panel toggle-left">
-                    <h1>Welcome Back!</h1>
-                    <p>Enter your personal details to use all of site features</p>
+                <div class="toggle-panel toggle-signin">
+                    <h1 class="d-sm-none">Welcome Back!</h1>
+                    <p class="d-sm-none">Enter your personal details to use all of site features</p>
                     <button class="hidden" id="login">Sign In</button>
                 </div>
-                <div class="toggle-panel toggle-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Register with your personal details to use all of site features</p>
+                <div class="toggle-panel toggle-signup">
+                    <h1 class="d-sm-none">Hello, Friend!</h1>
+                    <p class="d-sm-none">Register with your personal details to use all of site features</p>
                     <button class="hidden" id="register">Sign Up</button>
                 </div>
             </div>

@@ -1,0 +1,183 @@
+@media (max-width: 1399.98px) {
+    .d-xxl-block {
+        display: block !important;
+    }
+
+    .d-xxl-flex {
+        display: flex !important;
+    }
+
+    .d-xxl-grid {
+        display: grid !important;
+    }
+
+    .d-xxl-none {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .d-xl-block {
+        display: block !important;
+    }
+
+    .d-xl-flex {
+        display: flex !important;
+    }
+
+    .d-xl-grid {
+        display: grid !important;
+    }
+
+    .d-xl-none {
+        display: none !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .d-lg-block {
+        display: block !important;
+    }
+
+    .d-lg-flex {
+        display: flex !important;
+    }
+
+    .d-lg-grid {
+        display: grid !important;
+    }
+
+    .d-lg-none {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .d-md-block {
+        display: block !important;
+    }
+
+    .d-md-flex {
+        display: flex !important;
+    }
+
+    .d-md-grid {
+        display: grid !important;
+    }
+
+    .d-md-none {
+        display: none !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .d-sm-block {
+        display: block !important;
+    }
+
+    .d-sm-flex {
+        display: flex !important;
+    }
+
+    .d-sm-grid {
+        display: grid !important;
+    }
+
+    .d-sm-none {
+        display: none !important;
+    }
+
+    .sign-in {
+        left: 0;
+        top: 5%;
+        width: 100%;
+        height: 80%;
+        z-index: 2;
+    }
+
+    .container.active .sign-in {
+        z-index: 1;
+        transform: translateY(100%);
+    }
+
+    .sign-up {
+        left: 0;
+        top: 5%;
+        width: 100%;
+        opacity: 0;
+        height: 80%;
+        z-index: 1;
+        transform: translateY(-100%);
+    }
+
+    .container.active .sign-up {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 2;
+        animation: move 0.1s;
+    }
+
+    .toggle-container {
+        position: absolute;
+        top: 85%;
+        left: 0;
+        width: 100%;
+        height: 15%;
+        overflow: hidden;
+        transition: all 0.6s ease-in-out;
+        border-radius: 50% 50% 0 0;
+        z-index: 1000;
+    }
+
+    .container.active .toggle-container {
+        transform: translateY(0);
+        border-radius: 50% 50% 0 0;
+    }
+
+    .toggle {
+        background-color: #512da8;
+        background: linear-gradient(to right, #5c6bc0, #512da8);
+        color: #fff;
+        position: relative;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transform: translateY(0);
+        transition: all 0.6s ease-in-out;
+    }
+
+    .container.active .toggle {
+        transform: translateY(0);
+    }
+
+    .toggle-panel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 30px;
+        text-align: center;
+        transform: translateY(0);
+        transition: all 0.6s ease-in-out;
+    }
+
+    .toggle-signin {
+        transform: translateY(100%);
+    }
+
+    .container.active .toggle-signin {
+        transform: translateY(0);
+    }
+
+    .toggle-signup {
+        right: 0;
+        transform: translateY(0);
+    }
+
+    .container.active .toggle-signup {
+        transform: translateY(-100%);
+    }
+}
