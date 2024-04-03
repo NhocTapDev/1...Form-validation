@@ -89,7 +89,7 @@
 
     .sign-in {
         left: 0;
-        top: 5%;
+        top: 15%;
         width: 100%;
         height: 80%;
         z-index: 2;
@@ -97,7 +97,9 @@
 
     .container.active .sign-in {
         z-index: 1;
-        transform: translateY(100%);
+        transform: translateY(-115%);
+        animation: move 0.6s;
+        opacity: 0;
     }
 
     .sign-up {
@@ -107,31 +109,31 @@
         opacity: 0;
         height: 80%;
         z-index: 1;
-        transform: translateY(-100%);
+        transform: translateY(105%);
     }
 
     .container.active .sign-up {
         transform: translateY(0);
         opacity: 1;
         z-index: 2;
-        animation: move 0.1s;
+        animation: move 0.6s;
     }
 
     .toggle-container {
         position: absolute;
-        top: 85%;
+        top: -35%;
         left: 0;
         width: 100%;
-        height: 15%;
+        height: 50%;
         overflow: hidden;
         transition: all 0.6s ease-in-out;
-        border-radius: 50% 50% 0 0;
+        border-radius: 0 0 30% 30%;
         z-index: 1000;
     }
 
     .container.active .toggle-container {
-        transform: translateY(0);
-        border-radius: 50% 50% 0 0;
+        transform: translateY(245%);
+        border-radius: 30% 30% 0 0;
     }
 
     .toggle {
@@ -150,13 +152,27 @@
         transform: translateY(0);
     }
 
-    .toggle-panel {
+    .toggle-signin {
         position: absolute;
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 0 30px;
+        text-align: center;
+        transform: translateY(0);
+        transition: all 0.6s ease-in-out;
+    }
+
+    .toggle-signup {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         flex-direction: column;
         padding: 0 30px;
         text-align: center;
@@ -165,7 +181,7 @@
     }
 
     .toggle-signin {
-        transform: translateY(100%);
+        transform: translateY(200%);
     }
 
     .container.active .toggle-signin {
@@ -178,6 +194,6 @@
     }
 
     .container.active .toggle-signup {
-        transform: translateY(-100%);
+        transform: translateY(-200%);
     }
 }
