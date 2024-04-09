@@ -77,14 +77,22 @@ body {
 }
 
 .container input {
-    background: #eee;
-    border: none;
+    color: #512da8;
+    background: #fff;
+    border: 1px solid #ccc;
     margin: 8px 0;
     padding: 10px 15px;
     font-size: 13px;
     border-radius: 8px;
     width: 250px;
     outline: none;
+}
+
+.container input:focus,
+.container input:valid {
+    background: transparent;
+    border: 1px solid #512da8;
+    transition: 0.3s ease;
 }
 
 .form-container {
@@ -94,17 +102,42 @@ body {
     transition: all 0.6s ease-in-out;
 }
 
-.form-container .form-password {
+.form-container .form-field {
     position: relative;
 }
 
-.form-container .form-password i {
+.form-container .form-field label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    font-size: 13px;
+    color: #ccc;
+    transform: translateY(-50%);
+    pointer-events: none;
+    padding: 0 5px;
+    transition: 0.3s ease;
+}
+
+.form-container .form-field input:focus + label,
+.form-container .form-field input:valid + label {
+    top: 8px;
+    background: #fff;
+    color: #512da8;
+    z-index: 10;
+}
+
+.form-container .form-field i {
     position: absolute;
     top: 8px;
     right: 0;
     font-size: 14px;
     cursor: pointer;
     padding: 9px;
+}
+
+.form-container .form-field input:focus ~ i,
+.form-container .form-field input:valid ~ i {
+    color: #512da8;
 }
 
 .sign-in {
@@ -115,6 +148,7 @@ body {
 
 .container.active .sign-in {
     transform: translateX(100%);
+    opacity: 0;
 }
 
 .sign-up {
@@ -179,7 +213,7 @@ body {
 }
 
 .toggle {
-    background-color: #512da8;
+    background: #512da8;
     height: 100%;
     background: linear-gradient(to right, #5c6bc0, #512da8);
     color: #fff;

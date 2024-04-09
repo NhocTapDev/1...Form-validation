@@ -5,68 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+    
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
+
     <title>Login Page</title>
 </head>
 
 <body>
     <div class="container" id="container-account">
-        <label for=""></label>
+        <label></label>
         <div class="form-container sign-up">
             <form>
                 <h1>Sign Up</h1>
-                <div class="form-name">
-                    <input type="text" placeholder="Name" required autocomplete="off">
+                <div class="form-field">
+                    <input type="text" required autocomplete="off">
+                    <label>Name</label>
                 </div>
-                <div class="form-email">
-                    <input type="email" placeholder="Email" required autocomplete="off">
+                <div class="form-field">
+                    <input type="email" required autocomplete="off">
+                    <label>Email</label>
                 </div>
-                <div class="form-password">
-                    <input id="signup-password" type="password" placeholder="Password" required autocomplete="off"
-                        minlength="6">
-                    <i id="signup-password-icon" class="bi bi-eye-slash" onclick="showPassword()"></i>
+                <div class="form-field">
+                    <input class="password" type="password" required autocomplete="off" minlength="3">
+                    <label>Password</label>
+                    <i class="password-icon bi bi-eye-slash"></i>
                 </div>
-                <div class="form-password">
-                    <input id="confirm-password" type="password" placeholder="Confirm password" required
-                        autocomplete="off" minlength="6">
-                    <i id="confirm-password-icon" class="bi-eye-slash" onclick="showCPassword()"></i>
+                <div class="form-field">
+                    <input class="password" type="password" required autocomplete="off" minlength="3">
+                    <label>Confirm password</label>
+                    <i class="password-icon bi-eye-slash"></i>
                 </div>
-                <div class="form-submit">
+                <div class="form-field">
                     <button type="submit">Sign Up</button>
                 </div>
                 <span>or Sign in with</span>
                 <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="icon"><i class="bi bi-google"></i></a>
+                    <a href="#" class="icon"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="icon"><i class="bi bi-github"></i></a>
+                    <a href="#" class="icon"><i class="bi bi-linkedin"></i></a>
                 </div>
             </form>
         </div>
         <div class="form-container sign-in">
             <form>
                 <h1>Sign In</h1>
-                <div class="form-email">
-                    <input type="email" placeholder="Email" required autocomplete="off">
+                <div class="form-field">
+                    <input type="email" required autocomplete="off">
+                    <label>Email</label>
                 </div>
-                <div class="form-password">
-                    <input id="signin-password" type="password" placeholder="Password" required autocomplete="off"
-                        minlength="6">
-                    <i id="signin-password-icon" class="i bi-eye-slash" onclick="showPassword()"></i>
+                <div class="form-field">
+                    <input class="password" type="password" required autocomplete="off" minlength="6">
+                    <label>Password</label>
+                    <i class="password-icon i bi-eye-slash"></i>
                 </div>
                 <a href="#">Forget Your Password?</a>
-                <div class="form-submit">
+                <div class="form-field">
                     <button type="submit">Sign In</button>
                 </div>
                 <span>or Sign in with</span>
                 <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="icon"><i class="bi bi-google"></i></a>
+                    <a href="#" class="icon"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="icon"><i class="bi bi-github"></i></a>
+                    <a href="#" class="icon"><i class="bi bi-linkedin"></i></a>
                 </div>
             </form>
         </div>
