@@ -19,33 +19,72 @@ body {
 
 .container {
     background: #fff;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 5px 15p rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    height: 480px;
-    max-height: 100%;
+    width: 1024px;
+    max-width: 90%;
+    height: 580px;
+    max-height: 90%;
 }
 
-.container p {
+.container .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 11;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+    background: #fff;
+    font-size: 18px;
+    color: #000;
+    border-radius: 0 0 0 40px;
+    transition: all 1.2s ease;
+    cursor: pointer;
+}
+
+.container.active .close {
+    background: #512da8;
+    color: #fff;
+}
+
+.container h1 {
+    margin-bottom: 50px;
+}
+
+.toggle-container p {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
 
+.container .form-message {
+    font-size: 12px;
+    color: #e03333;
+    visibility: hidden;
+    padding: 0 15px;
+}
+
 .container span {
-    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 12px;
 }
 
 .container a {
     color: #333;
-    font-size: 13px;
+    font-size: 12px;
     text-decoration: none;
-    margin: 15px 0 10px;
+    margin-bottom: 10px;
+}
+
+.container a:hover {
+    color: #512da8;
 }
 
 .container button {
@@ -58,13 +97,13 @@ body {
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin: 10px 0;
     cursor: pointer;
 }
 
 .container button.hidden {
     background: transparent;
     border-color: #fff;
+    margin: 20px 0;
 }
 
 .container form {
@@ -81,8 +120,8 @@ body {
     color: #512da8;
     background: #fff;
     border: 1px solid #ccc;
-    margin: 8px 0;
     padding: 10px 15px;
+    margin-bottom: 2px;
     font-size: 13px;
     border-radius: 8px;
     width: 250px;
@@ -97,6 +136,7 @@ body {
 }
 
 .form-container {
+    position: relative;
     position: absolute;
     top: 0;
     height: 100%;
@@ -105,31 +145,31 @@ body {
 
 .form-container .form-field {
     position: relative;
+    margin-bottom: 10px;
 }
 
 .form-container .form-field label {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 10px;
     font-size: 13px;
+    background: #fff;
     color: #ccc;
     transform: translateY(-50%);
     pointer-events: none;
     padding: 0 5px;
+    z-index: 10;
     transition: 0.3s ease;
 }
 
-.form-container .form-field input:focus + label,
-.form-container .form-field input:valid + label {
-    top: 8px;
-    background: #fff;
+.form-container .form-field input:focus ~ label,
+.form-container .form-field input:valid ~ label {
     color: #512da8;
-    z-index: 10;
 }
 
-.form-container .form-field i {
+.form-container .form-field .password-icon {
     position: absolute;
-    top: 8px;
+    top: 2px;
     right: 0;
     font-size: 14px;
     cursor: pointer;
@@ -181,10 +221,6 @@ body {
     }
 }
 
-.social-icons {
-    margin: 20px 0;
-}
-
 .social-icons a {
     border: 1px solid #ccc;
     border-radius: 20%;
@@ -204,13 +240,13 @@ body {
     height: 100%;
     overflow: hidden;
     transition: all 0.6s ease-in-out;
-    border-radius: 150px 0 0 100px;
-    z-index: 1000;
+    border-radius: 0 0 0 50%;
+    z-index: 10;
 }
 
 .container.active .toggle-container {
     transform: translateX(-100%);
-    border-radius: 0 150px 100px 0;
+    border-radius: 0 50% 0 0;
 }
 
 .toggle {

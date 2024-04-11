@@ -127,13 +127,13 @@
         height: 50%;
         overflow: hidden;
         transition: all 0.6s ease-in-out;
-        border-radius: 0 0 30% 30%;
-        z-index: 1000;
+        border-radius: 0 0 0 30%;
+        z-index: 10;
     }
 
     .container.active .toggle-container {
         transform: translateY(245%);
-        border-radius: 30% 30% 0 0;
+        border-radius: 0 30% 0 0;
     }
 
     .toggle {
