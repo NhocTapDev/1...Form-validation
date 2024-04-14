@@ -29,6 +29,10 @@ body {
     max-height: 90%;
 }
 
+#container-account {
+    display: none;
+}
+
 .container .close {
     position: absolute;
     top: 0;

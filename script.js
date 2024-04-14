@@ -1,7 +1,19 @@
+const close = document.querySelector('.close');
+const account = document.querySelector('.account');
+
+close.addEventListener('click', () => {
+    containerAcc.style.display = 'none';
+});
+
+account.addEventListener('click', () => {
+    containerAcc.style.display = 'block';
+});
+
 // ----------------- Change tab --------------------------------------------
 const containerAcc = document.querySelector('#container-account');
 const registerBtn = document.querySelector('#register');
 const loginBtn = document.querySelector('#login');
+
 
 registerBtn.addEventListener('click', () => {
     containerAcc.classList.add('active');
